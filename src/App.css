@@ -140,3 +140,21 @@ body {
   text-align: center;
   color: #7f8c8d;
 }
+
+.range-filter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.range-filter label {
+  font-size: 0.95rem;
+}
+
+.range-filter input[type='range'] {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #cc0000;
+}
