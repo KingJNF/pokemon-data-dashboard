@@ -158,3 +158,24 @@ body {
   cursor: pointer;
   accent-color: #cc0000;
 }
+
+.bounds-inputs {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.bounds-inputs label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  gap: 0.25rem;
+}
+
+.bounds-inputs input[type='number'] {
+  width: 70px;
+  padding: 0.4rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}

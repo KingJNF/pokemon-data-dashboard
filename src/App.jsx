@@ -11,6 +11,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('')
   const [typeFilter, setTypeFilter] = useState('all')
   const [minExp, setMinExp] = useState(0)
+  const [maxExp, setMaxExp] = useState(300)
   const [loading, setLoading] = useState(true)
 
   // Fetch API data using useEffect + async/await
@@ -56,7 +57,7 @@ function App() {
     .filter((p) =>
       typeFilter === 'all' ? true : p.types.includes(typeFilter)
     )
-    .filter((p) => p.baseExperience >= minExp)
+    .filter((p) => p.baseExperience >= minExp && p.baseExperience <= maxExp)
 
   return (
     <div className="app">
@@ -65,7 +66,12 @@ function App() {
       <div className="controls">
         <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         <Filter typeFilter={typeFilter} setTypeFilter={setTypeFilter} />
-        <RangeFilter minExp={minExp} setMinExp={setMinExp} />
+        <RangeFilter
+          minExp={minExp}
+          setMinExp={setMinExp}
+          maxExp={maxExp}
+          setMaxExp={setMaxExp}
+         />
       </div>
       {loading ? (
         <p className="loading">Loading Pokémon...</p>
