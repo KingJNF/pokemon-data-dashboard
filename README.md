@@ -46,7 +46,7 @@ The following **additional** features are implemented:
 
 Here's a video walkthrough of implemented user stories:
 
-[![Video Walkthrough](https://cdn.loom.com/sessions/thumbnails/a8980e69cd01417394d3fbf07896c431-with-play.gif)](https://www.loom.com/share/a8980e69cd01417394d3fbf07896c431)
+[Video Walkthrough](https://www.loom.com/share/a8980e69cd01417394d3fbf07896c431)
 
 
 ## Notes
