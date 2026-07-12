@@ -2,7 +2,8 @@
 
 Submitted by: **Jaime Nunez**
 
-This web app: **is an interactive Pokémon data dashboard built with React, React Router, and the PokéAPI. The dashboard view features two data visualizations — a pie chart showing the distribution of Pokémon types and a bar chart ranking the top Pokémon by base experience — alongside a searchable, filterable list. Clicking any Pokémon navigates to a unique detail page displaying extra stats like HP, Attack, Defense, and abilities. A persistent sidebar appears across both views.**
+**This web app:**
+is an interactive Pokémon data dashboard built with React, React Router, and the PokéAPI. The dashboard view features two data visualizations; a pie chart showing the distribution of Pokémon types and a bar chart ranking the top Pokémon by base experience alongside a searchable, filterable list. Clicking any Pokémon navigates to a unique detail page displaying extra stats like HP, Attack, Defense, and abilities. A persistent sidebar appears across both views.**
 
 Time spent: **[3]** hours spent in total
 
@@ -36,8 +37,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+### ▶️ [Click here to watch the Video Walkthrough](https://www.loom.com/share/7654bcc434504e97b5652efca5aa0178)
 
-[![Video Walkthrough](https://cdn.loom.com/sessions/thumbnails/7654bcc434504e97b5652efca5aa0178-with-play.gif)](https://www.loom.com/share/7654bcc434504e97b5652efca5aa0178)
+Recorded with Loom
 
 ## Notes
 
