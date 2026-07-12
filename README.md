@@ -1,56 +1,55 @@
-# Web Development Project 5 - *Basic Pokedex*
+# Web Development Project 6 - *Pokémon Data Dashboard*
 
 Submitted by: **Jaime Nunez**
 
-This web app: **displays a searchable, filterable dashboard of Pokémon data fetched from the PokéAPI. Users can search Pokémon by name, filter them by type, and narrow results by a base experience range. The dashboard also presents summary statistics that give an at-a-glance overview of the Pokémon dataset.**
+This web app: **is an interactive Pokémon data dashboard built with React, React Router, and the PokéAPI. The dashboard view features two data visualizations — a pie chart showing the distribution of Pokémon types and a bar chart ranking the top Pokémon by base experience — alongside a searchable, filterable list. Clicking any Pokémon navigates to a unique detail page displaying extra stats like HP, Attack, Defense, and abilities. A persistent sidebar appears across both views.**
 
-Time spent: **3** hours spent in total
+Time spent: **[3]** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **The site has a dashboard displaying a list of data fetched using an API call**
-  - The dashboard should display at least 10 unique items, one per row
-  - The dashboard includes at least two features in each row
-- [X] **`useEffect` React hook and `async`/`await` are used**
-- [X] **The app dashboard includes at least three summary statistics about the data** 
-  - The app dashboard includes at least three summary statistics about the data, such as:
-    - *Total Pokémon (total count of all fetched Pokémon)*
-    - *Average Base Experience (the mean base experience across all Pokémon)*
-    - *Most Common Type (the mode — the most frequently occurring Pokémon type)*
-- [X] **A search bar allows the user to search for an item in the fetched data**
-  - The search bar **correctly** filters items in the list, only displaying items matching the search query
-  - The list of results dynamically updates as the user types into the search bar
-- [X] **An additional filter allows the user to restrict displayed items by specified categories**
-  - The filter restricts items in the list using a **different attribute** than the search bar 
-  - The filter **correctly** filters items in the list, only displaying items matching the filter attribute in the dashboard
-  - The dashboard list dynamically updates as the user adjusts the filter
+- [x] **Clicking on an item in the list view displays more details about it**
+  - Clicking on an item in the dashboard list navigates to a detail view for that item
+  - Detail view includes extra information about the item not included in the dashboard view
+  - The same sidebar is displayed in detail view as in dashboard view
+- [x] **Each detail view of an item has a direct, unique URL link to that item’s detail view page**
+- [x] **The app includes at least two unique charts developed using the fetched data that tell an interesting story**
+  - At least two charts should be incorporated into the dashboard view of the site
+  - Each chart should describe a different aspect of the dataset
 
 The following **optional** features are implemented:
 
-- [x] Multiple filters can be applied simultaneously
-  - *The name search, type dropdown, and base experience range filter all apply to the list at the same time*
-- [x] Filters use different input types
-  - *A text input (name search), a dropdown selection (type filter), a slider, and number inputs (base experience) are all used*
-- [x] The user can enter specific bounds for filter values
-  - *Users can set a specific minimum and maximum base experience using the number input boxes*
+- [x] The site’s customized dashboard contains more content that explains what is interesting about the data 
+  - *A descriptive panel above the charts explains the dataset and suggests which filters to try*
+- [x] The site allows users to toggle between different data visualizations
+  - *Toggle buttons let users switch between the type-distribution pie chart, the base-experience bar chart, or view both at once*
 
 The following **additional** features are implemented:
 
-* [x] Each Pokémon row displays its sprite image alongside its name, type, and base experience
-* [x] A loading indicator is shown while the API data is being fetched
-* [x] The base experience slider and the "Min" number input are synced to the same value
+* [x] The detail view displays extra stats (HP, Attack, Defense, Height, Weight, and Abilities) not shown on the dashboard
+* [x] A "← Back to Dashboard" link on each detail view for easy navigation
+* [x] Carried over from Part 1: search bar, type filter, and a base-experience range slider with min/max inputs
 
 ## Video Walkthrough
 
-Here's a video walkthrough of implemented user stories:
+Here's a walkthrough of implemented user stories:
 
-[Video Walkthrough](https://www.loom.com/share/a8980e69cd01417394d3fbf07896c431)
 
+[![Video Walkthrough](https://cdn.loom.com/sessions/thumbnails/7654bcc434504e97b5652efca5aa0178-with-play.gif)](https://www.loom.com/share/7654bcc434504e97b5652efca5aa0178)
 
 ## Notes
 
-One challenge I had initially was choosing and finding an active API. I initially chose the Marvel API but it seems it was brought down at least a year ago and is no longer active. I had to search for another API that was free and available. I found the PokeAPI which has stats and information on all the Pokemon. With a current total of 1,025 Pokemon, I kept it simple to only the first 50 Pokemon so as to not overwhelm the system.
+One key challenge was a mix-up where the contents of `main.jsx` and `App.jsx` were swapped, which caused React to never mount and resulted in a blank white page with no console errors. Diagnosing it required checking that the `#root` div was empty in the Elements tab, then restoring each file's correct contents. Another consideration was structuring the app for React Router was lifting the API fetch up to `App.jsx` so both the dashboard and detail views could share the same data, and using the `useParams()` hook to load the correct Pokémon on each detail page.
 
-Another challenge was the PokéAPI's list endpoint only returns each Pokémon's name and URL, so a second fetch had to be made to each individual URL to retrieve full details like type, base experience, and sprite. This was solved using `Promise.all` to fetch all the details in parallel. Another consideration was keeping the range slider and the minimum number input synchronized, which was handled by binding both to the same piece of state.
+## License
+
+    Copyright 2026 Jaime Nunez
+
+    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and limitations under the License.
